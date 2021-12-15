@@ -96,12 +96,6 @@ data_to_split_matches_removed = pd.concat([data_to_split, matching_email_records
 data_to_add_to_bigquery = pd.DataFrame(data_to_split_matches_removed['Email'])
 data_to_add_to_bigquery.rename({'Email': 'string_field_0'}, axis=1, inplace=True)
 
-# Delete the existing table
-#client.delete_table('datafaux-ab0de.datafaux_100K.mailing_list_emails', not_found_ok=True)  # Make an API request.
-#print("Deleted table '{}'.".format('datafaux-ab0de.datafaux_100K.mailing_list_emails'))
-
-
-
 # Load email addresses from today's file into the bigquery database
 # https://cloud.google.com/bigquery/docs/samples/bigquery-load-table-dataframe
 job_config = bigquery.LoadJobConfig(
