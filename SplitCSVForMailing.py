@@ -36,14 +36,14 @@ Before we get started, we'll make the connection to our bigquery database
 
 # https://googleapis.dev/python/google-api-core/latest/auth.html
 credentials = service_account.Credentials.from_service_account_file(
-    '/Users/Matt/Desktop/Programming/Python/Madapup/Automations/bigquerykey.json', scopes=["https://www.googleapis.com/auth/cloud-platform"],
+    'bigquerykey.json', scopes=["https://www.googleapis.com/auth/cloud-platform"],
 )
 
 client = bigquery.Client(credentials=credentials, project=credentials.project_id,)
 
 
 # Save the folder name to a variable
-mailinglistfolder = '/Users/Matt/Desktop/Programming/Python/Madapup/Automations/'
+mailinglistfolder = '/Python/Madapup/Automations/'
 
 
 # Because the file name in the folder will change each day because of the date
