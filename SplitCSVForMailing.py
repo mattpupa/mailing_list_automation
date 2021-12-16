@@ -108,10 +108,10 @@ job = client.load_table_from_dataframe(
 )  # Make an API request.
 job.result()  # Wait for the job to complete.
 
-table = client.get_table('datafaux-ab0de.datafaux_100K.mailing_list_emails')  # Make an API request.
+table = client.get_table('mailing_list_emails')  # Make an API request.
 print(
     "Loaded {} rows and {} columns to {}".format(
-        table.num_rows, len(table.schema), 'datafaux-ab0de.datafaux_100K.mailing_list_emails'
+        table.num_rows, len(table.schema), 'mailing_list_emails'
     )
 )
 
